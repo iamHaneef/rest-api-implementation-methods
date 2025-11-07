@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REST API INTEGRATION</title>
+    </head>
+    <body>
+        <h1>HTTPS METHODS IN REST API</h1>
+
+        <!-- GET -->
+        
+        <script>
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(err => console.log(err));
+        </script> 
+
+
+        <!-- POST --->
+
+        <script>
+            fetch("https://jsonplaceholder.typicode.com/users",
+            {
+                method : "POST",
+                headers : {"Content-Type" : "application/json" },
+                body : JSON.stringify({
+                    name : "haneef",
+                    username : "haneef3111",
+                    email : "haneeffury@gmail,com"
+
+                })
+            })
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .then(err => console.log(err));
+            
+        </script> 
+
+
+        <!-- PUT --->
+         
+        <script>
+            fetch("https://jsonplaceholder.typicode.com/users/1",
+            {
+                method : "PUT",
+                headers : {"Content-Type" : "application/json" },
+                body : JSON.stringify({
+                    name : "haneef25",
+                    username : "haneef4111",
+                    email : "muhamad_haneef@gmail,com"
+
+                })
+            })
+            .then(res => res.json())
+            .then(data => console.log("UPDATED",data))
+            .then(err => console.log(err));
+            
+        </script> 
+
+        <!-- DELETE ---> 
+
+        <script>
+            fetch("https://jsonplaceholder.typicode.com/users/1",
+            {
+                method : "DELETE",
+            })
+            .then(res => res.json())
+            .then(data => console.log("DELETED",data))
+            .then(err => console.log(err));
+            
+        </script>
+
+
+    </body>
+</html>
