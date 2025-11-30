@@ -37,14 +37,14 @@ http://localhost:3000
 
 This project covers:
 
-✔ Express fundamentals
-✔ CRUD REST API
-✔ Params, Query, Body
-✔ Postman usage
-✔ Error handling
-✔ CORS
-✔ JSON responses
-✔ Testing with frontend
+✔ Express fundamentals  
+✔ CRUD REST API  
+✔ Params, Query, Body  
+✔ Postman usage  
+✔ Error handling  
+✔ CORS  
+✔ JSON responses  
+✔ Testing with frontend  
 
 -------------------------------------------------------
                 WORKED PROPERLY WELL
