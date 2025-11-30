@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REST-POSTMAN_CHECK</title>
+    </head>
+
+    <body>
+        <h1>IMPLEMENTATION of REST-POSTMAN_CHECK</h1>
+
+        <script>
+            //GET METHOD
+
+            fetch("https://jsonplaceholder.typicode.com/users")
+            .then(res => res.json())
+            .then(data => {console.log(("DATA FOUND : " + data))})
+            .catch(err => console.log("ERROR FOUND : " + err));
+        </script>
+
+        <script>
+            //POST 
+            fetch("https://jsonplaceholder.typicode.com/users" ,
+            {
+                method : "POST",
+                headers : {"Content-Type" : "application/json"},
+                body : JSON.stringify({
+
+                    "email" : "haneeffury@gmail.com",
+                    "pass" : "A311"
+                })
+            } )
+            .then(res => res.json())
+            .then(data => {console.log(("DATA FOUND : " + data))})
+            .catch(err => console.log("ERROR FOUND : " + err)); 
+        </script>
+
+                <script>
+
+            //PUT 
+
+            fetch("https://jsonplaceholder.typicode.com/users/4" ,
+            {
+
+                method : "PUT",
+                headers : {"Content-Type" : "application/json"},
+                body : JSON.stringify({
+
+                    "email" : "guhanfury@gmail.com",
+                    "pass" : "A311"
+
+                })
+            } )
+            .then(res => res.json())
+            .then(data => {console.log(("DATA FOUND : " + data))})
+            .catch(err => console.log("ERROR FOUND : " + err));
+            
+        </script>
+
+        <script>
+
+            //DELETE 
+
+            fetch("https://jsonplaceholder.typicode.com/users/6" ,
+            {
+                method : "DELETE"
+            } )
+            .then(res => res.json())
+            .then(data => {console.log(("DATA FOUND : " + data))})
+            .catch(err => console.log("ERROR FOUND : " + err));
+            
+        </script>
+
+    </body>
+</html>

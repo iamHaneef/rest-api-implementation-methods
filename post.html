@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REST-POSTMAN_CHECK</title>
+    </head>
+
+    <body>
+        <h1>IMPLEMENTATION of REST-POSTMAN_CHECK</h1>
+
+        <script>
+            //GET
+
+            fetch("http://localhost:3000")
+            .then(res => res.json())
+            .then(data => console.log("GET DATA FOUND : " , data))
+            .catch(err => console.log("GET ERROR FOUND " , err));
+        </script>
+
+        
+        <script>
+            //POST
+
+            fetch("http://localhost:3000" , 
+            {
+                method : "POST",
+                headers : {"Content-Type" : "application/json"},
+                body : JSON.stringify({
+                    email : "joel@gmail.com",
+                    password : "12345"
+                })
+            })
+            .then(res => res.json())
+            .then(data => console.log("GET DATA FOUND : " , data))
+            .catch(err => console.log("GET ERROR FOUND " , err));
+        </script>
+
+        <script>
+            //PUT
+
+            fetch("http://localhost:3000" , 
+            {
+                method : "PUT",
+                headers : {"Content-Type" : "application/json"},
+                body : JSON.stringify({
+                    email : "guhan@gmail.com",
+                    password : "12345"
+                })
+            })
+            .then(res => res.json())
+            .then(data => console.log("GET DATA FOUND : " , data))
+            .catch(err => console.log("GET ERROR FOUND " , err));
+        </script>
+
+                <script>
+            //DELETE
+
+            fetch("http://localhost:3000" , 
+            {
+                method : "DELETE"
+            })
+            .then(res => res.json())
+            .then(data => console.log("GET DATA FOUND : " , data))
+            .catch(err => console.log("GET ERROR FOUND " , err));
+        </script>
+
+    </body>
+</html>
