@@ -2,7 +2,7 @@ The Http method work well in Rest API Integration
 
 Check the Method work in Console only for establishment.
 
-# 🧩 Express.js REST API — Beginners Guide (CRUD + Postman)
+# 🧩 Express.js REST API — (CRUD + Postman)
 
 This project contains simple and clear examples of REST API development using **Express.js**, including:
 
